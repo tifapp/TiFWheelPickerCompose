@@ -36,7 +36,7 @@ internal fun DefaultWheelTimePicker(
 
     val hours = (0..23).map {
         Hour(
-            text = it.toString().padStart(2, '0').append(" hrs"),
+            text = it.toString().padStart(2, '0'),
             value = it,
             index = it
         )
@@ -51,7 +51,7 @@ internal fun DefaultWheelTimePicker(
 
     val minutes = (0..59).map {
         Minute(
-            text = it.toString().padStart(2, '0').append(" mins"),
+            text = it.toString().padStart(2, '0'),
             value = it,
             index = it
         )
