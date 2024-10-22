@@ -154,7 +154,12 @@ internal fun DefaultWheelTimePicker(
                         } else size.width * 2 / 3,
                         height = size.height / 3
                     )
-
+                    .align(
+                        alignment = if (timeFormat == TimeFormat.HOUR_24) {
+                            Alignment.Center
+                        } else Alignment.CenterStart
+                    ),
+                contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = "hrs",
@@ -162,6 +167,7 @@ internal fun DefaultWheelTimePicker(
                     color = textColor
                 )
             }
+    
             //Minute
             WheelTextPicker(
                 size = DpSize(
@@ -223,7 +229,12 @@ internal fun DefaultWheelTimePicker(
                         } else size.width * 2 / 3,
                         height = size.height / 3
                     )
-
+                    .align(
+                        alignment = if (timeFormat == TimeFormat.HOUR_24) {
+                            Alignment.Center
+                        } else Alignment.CenterStart
+                    ),
+                contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = "mins",
@@ -231,6 +242,7 @@ internal fun DefaultWheelTimePicker(
                     color = textColor
                 )
             }
+    
             //AM_PM
             if(timeFormat == TimeFormat.AM_PM) {
                 WheelTextPicker(
