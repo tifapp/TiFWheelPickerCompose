@@ -153,11 +153,6 @@ internal fun DefaultWheelTimePicker(
                             size.width
                         } else size.width * 2 / 3,
                         height = size.height / 3
-                    )
-                    .align(
-                        alignment = if (timeFormat == TimeFormat.HOUR_24) {
-                            Alignment.Center
-                        } else Alignment.CenterStart
                     ),
                 contentAlignment = Alignment.Center
             ) {
@@ -228,11 +223,6 @@ internal fun DefaultWheelTimePicker(
                             size.width
                         } else size.width * 2 / 3,
                         height = size.height / 3
-                    )
-                    .align(
-                        alignment = if (timeFormat == TimeFormat.HOUR_24) {
-                            Alignment.Center
-                        } else Alignment.CenterStart
                     ),
                 contentAlignment = Alignment.Center
             ) {
