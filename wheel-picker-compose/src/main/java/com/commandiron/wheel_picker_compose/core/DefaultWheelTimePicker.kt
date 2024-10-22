@@ -146,23 +146,6 @@ internal fun DefaultWheelTimePicker(
                     }
                 }
             )
-            Box(
-                modifier = Modifier
-                    .size(
-                        width = if (timeFormat == TimeFormat.HOUR_24) {
-                            size.width
-                        } else size.width * 2 / 3,
-                        height = size.height / 3
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "hrs",
-                    style = textStyle,
-                    color = textColor
-                )
-            }
-    
             //Minute
             WheelTextPicker(
                 size = DpSize(
@@ -216,23 +199,6 @@ internal fun DefaultWheelTimePicker(
                     return@WheelTextPicker minutes.find { it.value == snappedTime.minute }?.index
                 }
             )
-            Box(
-                modifier = Modifier
-                    .size(
-                        width = if (timeFormat == TimeFormat.HOUR_24) {
-                            size.width
-                        } else size.width * 2 / 3,
-                        height = size.height / 3
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "mins",
-                    style = textStyle,
-                    color = textColor
-                )
-            }
-    
             //AM_PM
             if(timeFormat == TimeFormat.AM_PM) {
                 WheelTextPicker(
@@ -294,6 +260,48 @@ internal fun DefaultWheelTimePicker(
                     }
                 )
             }
+        }
+        Box(
+            modifier = Modifier
+                .size(
+                    width = if (timeFormat == TimeFormat.HOUR_24) {
+                        size.width
+                    } else size.width * 2 / 3,
+                    height = size.height / 3
+                )
+                .align(
+                    alignment = if (timeFormat == TimeFormat.HOUR_24) {
+                        Alignment.Center
+                    } else Alignment.CenterStart
+                ),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "hrs",
+                style = textStyle,
+                color = textColor
+            )
+        }
+        Box(
+            modifier = Modifier
+                .size(
+                    width = if (timeFormat == TimeFormat.HOUR_24) {
+                        size.width
+                    } else size.width * 2 / 3,
+                    height = size.height / 3
+                )
+                .align(
+                    alignment = if (timeFormat == TimeFormat.HOUR_24) {
+                        Alignment.Center
+                    } else Alignment.CenterStart
+                ),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = "mins",
+                style = textStyle,
+                color = textColor
+            )
         }
     }
 }
