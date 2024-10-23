@@ -157,7 +157,7 @@ internal fun DefaultWheelTimePicker(
                 contentAlignment = Alignment.Center
             ){
                 Text(
-                    text = "hrs",
+                    text = "hours",
                     style = textStyle,
                     color = textColor
                 )
@@ -227,7 +227,7 @@ internal fun DefaultWheelTimePicker(
                 contentAlignment = Alignment.Center
             ){
                 Text(
-                    text = "mins",
+                    text = "minutes",
                     style = textStyle,
                     color = textColor
                 )
